@@ -9,6 +9,8 @@ import { MakeupModule } from './makeup/makeup.module';
 import { Makeup } from './makeup/entities/makeup.entity';
 import { MembershipsModule } from './memberships/memberships.module';
 import { Membership } from './memberships/entities/membership.entity';
+import { EventsModule } from './events/events.module';
+import { Event } from './events/entities/event.entity';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -23,7 +25,7 @@ import { Membership } from './memberships/entities/membership.entity';
       username: process.env.DB_USER,
       password: process.env.DB_PASSWORD,
       database: process.env.DB_NAME,
-      entities: [Model, Photo, Makeup, Membership], // Asegúrate de incluir todas las entidades aquí
+      entities: [Model, Photo, Makeup, Membership, Event], // Asegúrate de incluir todas las entidades aquí
       synchronize: false, 
     }),
 
@@ -32,6 +34,7 @@ import { Membership } from './memberships/entities/membership.entity';
     PhotosModule,
     MakeupModule,
     MembershipsModule,
+    EventsModule,
   ],
 })
 export class AppModule {}
