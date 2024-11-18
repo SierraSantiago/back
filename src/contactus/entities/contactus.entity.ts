@@ -1,8 +1,9 @@
+// src/contactus/contactus.entity.ts
 
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 @Entity()
-export class ContactUs {
+export class Contactus {
   @PrimaryGeneratedColumn()
   id: number;
 

@@ -11,8 +11,8 @@ import { MembershipsModule } from './memberships/memberships.module';
 import { Membership } from './memberships/entities/membership.entity';
 import { EventsModule } from './events/events.module';
 import { Event } from './events/entities/event.entity';
-import { ContactUsModule } from './contact-us/contact-us.module';
-import { ContactUs } from './contact-us/entities/contact-us.entity';
+import { ContactusModule } from './contactus/contactus.module';
+import { Contactus } from './contactus/entities/contactus.entity';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -27,7 +27,7 @@ import { ContactUs } from './contact-us/entities/contact-us.entity';
       username: process.env.DB_USER,
       password: process.env.DB_PASSWORD,
       database: process.env.DB_NAME,
-      entities: [Model, Photo, Makeup, Membership, Event, ContactUs], // Asegúrate de incluir todas las entidades aquí
+      entities: [Model, Photo, Makeup, Membership, Event, Contactus], // Asegúrate de incluir todas las entidades aquí
       synchronize: false, 
     }),
 
@@ -37,8 +37,7 @@ import { ContactUs } from './contact-us/entities/contact-us.entity';
     MakeupModule,
     MembershipsModule,
     EventsModule,
-    ContactUsModule,
-    ContactUsModule,
+    ContactusModule,
   ],
 })
 export class AppModule {}
